@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <title>Countdown</title>
+    <script type="text/javascript">
+
+        var mins = 1;
+        var secs = mins * 60;
+
+        function Decrement() {
+            minutes = document.getElementById("minutes");
+            seconds = document.getElementById("seconds");
+            if (seconds < 59) {
+                seconds.value = secs;
+            } else {
+                minutes.value = getminutes();
+                seconds.value = getseconds();
+            }
+            secs--;
+
+            if (secs <= 0 && mins <= 0) {
+
+                return;
+            }
+            setTimeout(function () {
+                Decrement()
+            }, 1000);
+        }
+
+        function getminutes() {
+            mins = Math.floor(secs / 60);
+            return mins;
+        }
+
+        function getseconds() {
+            return secs - Math.round(mins * 60);
+        }
+
+        function countdown() {
+            setTimeout(function () {
+                Decrement()
+            }, 1000);
+        }
+
+        countdown();
+    </script>
+    </head>
+
+    <body>
+
+        <div style="text-align:center ;" id="timer">
+            DEAL ENDING IN
+            <input id="minutes" type="text"
+                style="width: 24px; border: none; background-color:none; font-size: 16px; font-weight: bold;">
+            :
+            <input id="seconds" type="text"
+                style="width: 26px; border: none; background-color:none; font-size: 16px; font-weight: bold;">
+
+        </div>
+        <script>
+            countdown();
+        </script>
+
+        <p style="text-align: center; font-size:20px;font-weight:400">
+            <script>
+                document.write(new Date().toDateString());
+            </script>
+        </p>
+
+    </body>
+
+</html>

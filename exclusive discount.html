@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="border: solid 5px #fc7742;padding: 10px;">
+        <div style="text-align:center;">
+            <h2 style="font-size: 44;font-weight:600;">GET EXCLUSIVE DISCOUNT</h2>
+            <h2 style="font-weight: 500;">JOIN THE #1 COFFEE TRIBE AND TRY JAVY WHILE IT'S ON SALE NOW!</h2>
+
+            <a href="https://wldoho.de/">
+                <button
+                    style="cursor:pointer;border-radius: 30px;background-color: #fc7742;border-color:#fc7742;height: 100px;border: 1px solid black;">
+                    <h2>Get YOUR JAVY NOW!</h2>
+                    <p>Try it today with 30-Day Money Back Guarantee</p>
+                </button>
+            </a>
+            <div style="text-align:center;margin: 20px;">
+                <a href="https://wldoho.de/">
+                    <button style="cursor:pointer;width:300px; border: dotted 1px black;padding:0px;">
+                        <h5>SELL-OUT RISK: <span style="color:red ;padding:5px">HIGH</span>🚚Free Shipping</h5>
+                    </button>
+                </a>
+            </div>
+
+        </div>
+
+        <div>
+            <title>Countdown</title>
+            <script type="text/javascript">
+
+                var mins = 15;
+                var secs = mins * 60;
+
+                function Decrement() {
+                    minutes = document.getElementById("minutes");
+                    seconds = document.getElementById("seconds");
+                    if (seconds < 59) {
+                        seconds.value = secs;
+                    } else {
+                        minutes.value = getminutes();
+                        seconds.value = getseconds();
+                    }
+                    secs--;
+
+                    if (secs <= 0 && mins <= 0) {
+
+                        return;
+                    }
+                    setTimeout(function () {
+                        Decrement()
+                    }, 1000);
+                }
+
+                function getminutes() {
+                    mins = Math.floor(secs / 60);
+                    return mins;
+                }
+
+                function getseconds() {
+                    return secs - Math.round(mins * 60);
+                }
+
+                function countdown() {
+                    setTimeout(function () {
+                        Decrement()
+                    }, 1000);
+                }
+
+                countdown();
+            </script>
+            </head>
+
+            <body>
+
+                <div style="text-align:center ;" id="timer">
+                    <span style="font-weight:bold ;">DEAL ENDING IN:</span>
+                    <input id="minutes" type="text"
+                        style="width: 25px; border: none; background-color:none; font-size: 16px; font-weight: bold;color: #fc7742;">
+                    <span style="color: #fc7742;font-size: 16px; font-weight: bold;">:</span>
+                    <input id="seconds" type="text"
+                        style="width: 26px; border: none; background-color:none; font-size: 16px; font-weight: bold;color: #fc7742;">
+
+                </div>
+                <script>
+                    countdown();
+                </script>
+
+                <p style="text-align: center; font-size:15px;font-weight:400">
+                    <script>
+                        document.write(new Date().toDateString());
+                    </script>
+                </p>
+        </div>
+
+    </div>
+</body>
+
+</html>
